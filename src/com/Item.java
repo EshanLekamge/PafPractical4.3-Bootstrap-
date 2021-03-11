@@ -114,7 +114,7 @@ public class Item {
 			try {
 				Connection con = connect();
 				if (con == null) {
-					return "Error while connecting to the database for reading.";
+					return "Error while connecting to the database for deleting.";
 				}
 
 				String query = "delete from items where itemID = ?";
@@ -137,7 +137,7 @@ public class Item {
 			Connection con = connect();
 			String output = "";
 			if (con == null) {
-				return "Error while connecting to the database";
+				return "Error while connecting to the database for updating.";
 			}
 
 			// create a prepared statement
